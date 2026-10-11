@@ -2,9 +2,6 @@ import './style.css'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="Impera home">
-      <span class="brand-mark" aria-hidden="true"><i></i><b></b></span>
-    </a>
     <nav class="main-nav" id="main-nav" aria-label="Main navigation">
       <a href="#platform">Platform</a>
       <a href="#plans">Plans</a>
@@ -16,68 +13,40 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       <span></span><span></span>
     </button>
   </header>
+  <a class="floating-waitlist" href="#early-access" draggable="false"><span aria-hidden="true">♟</span> Join Waitlist <b aria-hidden="true">↗</b></a>
 
   <main id="top">
     <section class="diorama-hero" aria-labelledby="scene-title">
       <div class="wall-brand">
         <h1 id="scene-title">IMPERA</h1>
-        <p>powered by <strong>eco green developers</strong></p>
       </div>
-      <p class="scene-tagline">KEEP YOUR VENTURE <em>ORGANISED</em></p>
-      <p class="scene-subtitle">One intelligent home for your whole business.</p>
+      <p class="scene-tagline">KEEP YOUR BUSINESS <em>ORGANISED</em></p>
 
       <div class="department-diorama">
-        <article class="island island-sales">
-          <h2 class="island-label">SALES</h2>
-          <div class="island-surface">
-            <div class="sales-screen"><span>Pipeline</span><div class="screen-chart"><i></i><i></i><i></i><i></i><i></i><i></i></div><small>$128,400</small></div>
-            <div class="sales-desk"></div><div class="mini-person person-blue"><i></i></div>
-            <div class="island-plant"><i></i><i></i><b></b></div>
-          </div>
+        <article class="island island-sales island-photo">
+          <img class="department-diorama-image" src="/sales-diorama.png" alt="A 3D Sales workspace with a sales professional, analytics charts, and office equipment" width="1024" height="1024" decoding="async">
         </article>
-        <article class="island island-hiring">
-          <h2 class="island-label">HIRING</h2>
-          <div class="island-surface">
-            <div class="hiring-board"><span>MEET YOUR NEXT TEAMMATE</span><div class="candidate-card"><i class="candidate-photo"></i><b>Riley Brooks</b><small>Product designer</small></div><div class="candidate-card"><i class="candidate-photo candidate-two"></i><b>Taylor Nguyen</b><small>Growth lead</small></div></div>
-            <div class="hiring-table"></div><div class="mini-person person-coral"><i></i></div><div class="mini-person person-gold"><i></i></div>
-          </div>
+        <article class="island island-hiring island-photo">
+          <img class="department-diorama-image" src="/hiring-diorama.png" alt="A 3D Hiring workspace with two recruiters reviewing candidate profiles" width="1024" height="1024" decoding="async">
         </article>
-        <article class="island island-projects">
-          <h2 class="island-label">PROJECT MANAGEMENT</h2>
-          <div class="island-surface">
-            <div class="project-board"><span>Q4 LAUNCH</span><div class="project-columns"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
-            <div class="project-desk"></div><div class="mini-person person-violet"><i></i></div><div class="mini-person person-gold project-helper"><i></i></div>
-          </div>
+        <article class="island island-projects island-photo">
+          <img class="department-diorama-image" src="/project-management-diorama.png" alt="A 3D Project Management workspace with two team members and a visual task board" width="1478" height="1064" decoding="async">
         </article>
-        <article class="island island-attendance">
-          <h2 class="island-label">PEOPLE &amp; ATTENDANCE</h2>
-          <div class="island-surface">
-            <div class="attendance-screen"><span>TEAM CHECK-IN</span><strong>09:02</strong><small>Good morning, Sam</small><div class="attendance-dots"><i></i><i></i><i></i><i></i></div></div>
-            <div class="clock-face">9:02</div><div class="mini-person person-green"><i></i></div>
-          </div>
+        <article class="island island-attendance island-photo">
+          <img class="department-diorama-image" src="/attendance-diorama.png" alt="A 3D Attendance workspace with an employee checking in at a biometric terminal" width="1024" height="1024" decoding="async">
         </article>
-        <article class="island island-accounts">
-          <h2 class="island-label">ACCOUNTS</h2>
-          <div class="island-surface">
-            <div class="accounts-screen"><span>MONTHLY OVERVIEW</span><strong>$42,680</strong><div class="account-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
-            <div class="accounts-desk"></div><div class="mini-person person-teal"><i></i></div><div class="coin-stack"><i></i><i></i><i></i></div>
-            <div class="island-plant"><i></i><i></i><b></b></div>
-          </div>
+        <article class="island island-accounts island-photo">
+          <img class="department-diorama-image" src="/accounts-diorama.png" alt="A 3D Accounts workspace with an accountant, financial charts, and office equipment" width="1024" height="1024" decoding="async">
         </article>
       </div>
-      <a class="scene-waitlist" href="#early-access"><span aria-hidden="true">♟</span> Join Waitlist <b aria-hidden="true">↗</b></a>
     </section>
 
     <section class="what-is-section" id="about" aria-labelledby="what-is-title">
-      <div class="network-illustration" role="img" aria-label="Impera connects sales, hiring, human resources, accounting, and projects in one platform">
-        <div class="network-wires" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-        <article class="network-node node-sales"><span class="node-icon sales-node-icon">▥</span><b>Sales</b><div class="node-chart"><i></i><i></i><i></i><i></i></div><small>Pipeline</small></article>
-        <article class="network-node node-hiring"><span class="node-icon hiring-node-icon">◉</span><b>Hiring</b><div class="node-candidates"><i></i><i></i><i></i></div><small>Talent</small></article>
-        <article class="network-node node-hr"><span class="node-icon hr-node-icon">♧</span><b>HR</b><div class="node-people"><i></i><i></i><i></i><i></i></div><small>People</small></article>
-        <article class="network-node node-accounts"><span class="node-icon accounts-node-icon">▤</span><b>Accounts</b><div class="node-donut"><i></i></div><small>Finance</small></article>
-        <article class="network-node node-projects"><span class="node-icon projects-node-icon">▦</span><b>Projects</b><div class="node-tasks"><i></i><i></i><i></i></div><small>Workflow</small></article>
-        <div class="network-core"><span class="core-mark"><i></i><b></b></span><strong>IMPERA</strong></div>
-        <span class="network-spark spark-one" aria-hidden="true">✦</span><span class="network-spark spark-two" aria-hidden="true">✧</span>
+      <div class="network-video-stage" role="img" aria-label="Animated diagram showing Impera connected to sales, hiring, human resources, accounting, and projects">
+        <video class="network-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+          <source src="/impera-network.mp4" type="video/mp4">
+        </video>
+        <span class="network-video-brand" aria-hidden="true">IMPERA</span>
       </div>
       <div class="what-is-copy">
         <h2 id="what-is-title">What is <span>Impera</span>?</h2>
@@ -85,7 +54,6 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
         <p class="connected-line">Everything stays connected.</p>
         <div class="what-is-actions">
           <a class="blue-action contact-action" href="#early-access"><span aria-hidden="true">☎</span> Contact Us</a>
-          <a class="blue-action waitlist-action" href="#early-access"><span class="group-icon" aria-hidden="true"><i></i><i></i><i></i></span> Join Waitlist</a>
         </div>
       </div>
     </section>
@@ -114,25 +82,17 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
           <li class="workflow-step"><span class="flow-icon" aria-hidden="true">◌</span><span class="flow-name">Analytics</span><span class="flow-route" aria-hidden="true"></span></li>
         </ol>
       </div>
-      <a class="features-waitlist blue-action" href="#early-access"><span class="group-icon" aria-hidden="true"><i></i><i></i><i></i></span> Join Waitlist</a>
     </section>
 
     <section class="whatsapp-section" aria-labelledby="whatsapp-title">
       <div class="whatsapp-scene" role="img" aria-label="A business owner asks Impera for updates through WhatsApp, with information connected across the team">
-        <div class="wa-cables" aria-hidden="true"><i></i><i></i><i></i></div>
-        <div class="wa-island wa-team"><div class="team-booth"><i></i><b></b></div><div class="team-person person-meeting-one"><i></i></div><div class="team-person person-meeting-two"><i></i></div></div>
-        <div class="wa-island wa-laptop"><div class="laptop-table"></div><div class="laptop-device"><i></i></div><div class="team-person person-laptop"><i></i></div></div>
-        <div class="wa-island wa-whiteboard"><div class="whiteboard"><span>THIS WEEK</span><i></i><i></i><i></i></div><div class="whiteboard-stand"></div><div class="team-person person-presenter"><i></i></div></div>
-        <div class="wa-island wa-owner"><div class="sofa"><i></i><b></b></div><div class="owner-person"><i></i><b></b></div><div class="owner-phone">▰</div></div>
-        <div class="whatsapp-badge" aria-hidden="true"><span>☎</span></div>
-        <span class="wa-spark wa-spark-one" aria-hidden="true">✦</span><span class="wa-spark wa-spark-two" aria-hidden="true">✧</span>
+        <img class="whatsapp-scene-image" src="/whatsapp-connected-team.png" alt="A business owner uses WhatsApp to stay connected with teams working across the business" width="1528" height="1029" loading="lazy" decoding="async">
       </div>
       <div class="whatsapp-copy">
         <h2 id="whatsapp-title">Manage Everything<br>From <span>WhatsApp</span></h2>
         <p>Ask Impera anything about your business in a single message. Attendance, deals, invoices, and project updates: Impera reads across every module and replies right inside the app you already use. No extra logins, no dashboards, no waiting for someone to send a report.</p>
         <p class="whatsapp-tagline">Your entire company, one message away.</p>
       </div>
-      <a class="blue-action whatsapp-waitlist" href="#early-access"><span class="group-icon" aria-hidden="true"><i></i><i></i><i></i></span> Join Waitlist</a>
     </section>
 
     <section class="assistant-demo-section" aria-label="Impera AI assistant connected to every department">
@@ -159,22 +119,22 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     </section>
 
       <section class="automation-section" aria-labelledby="automation-title">
-        <div class="automation-content">
-          <h2 id="automation-title">AI-Powered Business<br><span>Automation</span></h2>
-          <h3>AI Capabilities</h3>
-          <ul class="automation-list">
-            <li><span aria-hidden="true">▣</span><p>Write professional job descriptions in seconds.</p></li>
-            <li><span aria-hidden="true">▥</span><p>Rank and score every candidate, with the reasoning shown.</p></li>
-            <li><span aria-hidden="true">▤</span><p>Turn resumes into structured profiles, with no manual entry.</p></li>
-            <li><span aria-hidden="true">▥</span><p>Score leads and predict which deals are most likely to close.</p></li>
-            <li><span aria-hidden="true">✎</span><p>Draft sales emails, follow-ups, and proposals instantly.</p></li>
-            <li><span aria-hidden="true">$</span><p>Scan receipts and invoices straight into your books.</p></li>
-            <li><span aria-hidden="true">⚑</span><p>Flag cash-flow risk and surface runway concerns early.</p></li>
-            <li><span aria-hidden="true">!</span><p>Catch project delays and scope creep before deadlines slip.</p></li>
-            <li><span aria-hidden="true">−</span><p>Spot absenteeism, late arrivals, and overtime patterns early.</p></li>
-            <li><span aria-hidden="true">▧</span><p>Flag duplicate invoices and mismatched entries automatically.</p></li>
-          </ul>
-          <a class="blue-action automation-waitlist" href="#early-access"><span class="group-icon" aria-hidden="true"><i></i><i></i><i></i></span> Join Waitlist</a>
+        <div class="automation-layout">
+          <div class="automation-content">
+            <h2 id="automation-title">AI-Powered Business<br><span>Automation</span></h2>
+            <h3>AI Capabilities</h3>
+            <ul class="automation-list">
+              <li><span class="capability-logo" aria-hidden="true"><img src="/innovative-icon.png" alt="" width="1024" height="1024" decoding="async"></span><p><strong>INNOVATIVE:</strong> Smarter solutions for modern businesses.</p></li>
+              <li><span class="capability-logo" aria-hidden="true"><img src="/multitasker-icon.png" alt="" width="1024" height="1024" decoding="async"></span><p><strong>MULTITASKER:</strong> Multiple workflows. One intelligent system.</p></li>
+              <li><span class="capability-logo" aria-hidden="true"><img src="/performant-icon.png" alt="" width="1024" height="1024" decoding="async"></span><p><strong>PERFORMANT:</strong> Delivering fast, reliable, high-level performance.</p></li>
+              <li><span class="capability-logo efficient-logo" aria-hidden="true"><svg viewBox="0 0 72 72" focusable="false"><path d="M18 10C33 3 51 7 61 19"/><path d="m58 11 10 11-15 2Z"/><path d="M66 35c0 16-10 28-24 33"/><path d="m45 61-13 8 13 3Z"/><path d="M24 65C11 59 5 46 8 32"/><path d="m2 35 7-14 7 14Z"/><g class="efficient-gear"><rect x="33" y="15" width="6" height="12" rx="1"/><rect x="33" y="15" width="6" height="12" rx="1" transform="rotate(45 36 36)"/><rect x="33" y="15" width="6" height="12" rx="1" transform="rotate(90 36 36)"/><rect x="33" y="15" width="6" height="12" rx="1" transform="rotate(135 36 36)"/><rect x="33" y="15" width="6" height="12" rx="1" transform="rotate(180 36 36)"/><rect x="33" y="15" width="6" height="12" rx="1" transform="rotate(225 36 36)"/><rect x="33" y="15" width="6" height="12" rx="1" transform="rotate(270 36 36)"/><rect x="33" y="15" width="6" height="12" rx="1" transform="rotate(315 36 36)"/><circle cx="36" cy="36" r="16"/><circle class="efficient-ring" cx="36" cy="36" r="10"/><circle class="efficient-core" cx="36" cy="36" r="7"/><path class="efficient-check" d="m31.5 36.5 3.2 3.2 6.3-7"/></g></svg></span><p><strong>EFFICIENT:</strong> Optimizing workflows and maximizing productivity.</p></li>
+              <li><span class="capability-logo" aria-hidden="true"><img src="/responsive-icon.png" alt="" width="1024" height="1024" decoding="async"></span><p><strong>RESPONSIVE:</strong> Adapting instantly to every business need.</p></li>
+              <li><span class="capability-logo" aria-hidden="true"><img src="/automated-icon.png" alt="" width="1024" height="1024" decoding="async"></span><p><strong>AUTOMATED:</strong> Turning repetitive tasks into smart workflows.</p></li>
+            </ul>
+          </div>
+          <figure class="automation-poster">
+            <img src="/automation-poster.png" alt="What Impera can automate, from manual work to automated business processes" width="1120" height="1408" loading="lazy" decoding="async">
+          </figure>
         </div>
       </section>
 
@@ -227,12 +187,22 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       </div>
       <div class="team-portraits">
         <figure class="team-portrait">
-          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1000&q=85" alt="Illustrative portrait placeholder for the Impera team" loading="lazy" decoding="async">
-          <figcaption><strong>Impera</strong><span>Leadership</span></figcaption>
+          <div class="team-portrait-media ceo-media">
+            <img class="ceo-portrait" src="/ceo-eco-green-developers.jpeg" alt="CEO of Eco Green Developers" width="1086" height="1448" loading="lazy" decoding="async">
+          </div>
+          <figcaption><strong>CEO</strong><span>ECO GREEN DEVELOPERS</span></figcaption>
         </figure>
         <figure class="team-portrait">
-          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1000&q=85" alt="Illustrative portrait placeholder for Eco Green Developers" loading="lazy" decoding="async">
-          <figcaption><strong>Eco Green Developers</strong><span>Development partner</span></figcaption>
+          <div class="team-portrait-media impera-media">
+            <img src="/impera-leadership.jpeg" alt="Impera leadership" width="1024" height="1537" loading="lazy" decoding="async">
+          </div>
+          <figcaption><strong>IMPERA</strong><span>Leadership</span></figcaption>
+        </figure>
+        <figure class="team-portrait">
+          <div class="team-portrait-media director-media">
+            <img src="/impera-development-director.jpeg" alt="Impera Development Director" width="1064" height="1478" loading="lazy" decoding="async">
+          </div>
+          <figcaption><strong>IMPERA</strong><span>Development Director</span></figcaption>
         </figure>
       </div>
     </section>
@@ -544,6 +514,62 @@ planTabs.forEach((tab, index) => {
 
 renderPlanModule('Hiring', planTabs[0])
 
+const floatingWaitlist = document.querySelector<HTMLAnchorElement>('.floating-waitlist')!
+let draggingWaitlist = false
+let movedWaitlist = false
+let suppressWaitlistClick = false
+let waitlistOffsetX = 0
+let waitlistOffsetY = 0
+
+const moveWaitlist = (clientX: number, clientY: number) => {
+  const bounds = floatingWaitlist.getBoundingClientRect()
+  const maxLeft = Math.max(0, window.innerWidth - bounds.width)
+  const maxTop = Math.max(0, window.innerHeight - bounds.height)
+  const left = Math.max(0, Math.min(maxLeft, clientX - waitlistOffsetX))
+  const top = Math.max(0, Math.min(maxTop, clientY - waitlistOffsetY))
+  floatingWaitlist.style.left = `${left}px`
+  floatingWaitlist.style.top = `${top}px`
+  floatingWaitlist.style.right = 'auto'
+  floatingWaitlist.style.bottom = 'auto'
+}
+
+floatingWaitlist.addEventListener('pointerdown', (event) => {
+  if (!event.isPrimary || event.button !== 0) return
+  const bounds = floatingWaitlist.getBoundingClientRect()
+  draggingWaitlist = true
+  movedWaitlist = false
+  waitlistOffsetX = event.clientX - bounds.left
+  waitlistOffsetY = event.clientY - bounds.top
+  floatingWaitlist.style.left = `${bounds.left}px`
+  floatingWaitlist.style.top = `${bounds.top}px`
+  floatingWaitlist.style.right = 'auto'
+  floatingWaitlist.style.bottom = 'auto'
+  floatingWaitlist.classList.add('is-dragging')
+  floatingWaitlist.setPointerCapture(event.pointerId)
+})
+
+floatingWaitlist.addEventListener('pointermove', (event) => {
+  if (!draggingWaitlist) return
+  movedWaitlist = true
+  event.preventDefault()
+  moveWaitlist(event.clientX, event.clientY)
+})
+
+const stopWaitlistDrag = (event: PointerEvent) => {
+  if (!draggingWaitlist) return
+  draggingWaitlist = false
+  suppressWaitlistClick = movedWaitlist
+  floatingWaitlist.classList.remove('is-dragging')
+  if (floatingWaitlist.hasPointerCapture(event.pointerId)) floatingWaitlist.releasePointerCapture(event.pointerId)
+  window.setTimeout(() => { suppressWaitlistClick = false }, 0)
+}
+
+floatingWaitlist.addEventListener('pointerup', stopWaitlistDrag)
+floatingWaitlist.addEventListener('pointercancel', stopWaitlistDrag)
+floatingWaitlist.addEventListener('click', (event) => {
+  if (suppressWaitlistClick) event.preventDefault()
+})
+
 const comparisonStage = document.querySelector<HTMLElement>('.comparison-stage')!
 const comparisonRange = document.querySelector<HTMLInputElement>('.comparison-range')!
 
@@ -589,6 +615,25 @@ comparisonRange.addEventListener('keydown', (event) => {
   }
 })
 updateComparison()
+
+const teamSection = document.querySelector<HTMLElement>('.team-section')
+const teamPortraits = document.querySelectorAll<HTMLElement>('.team-portrait')
+const reduceTeamMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+if (teamSection && teamPortraits.length && !reduceTeamMotion && 'IntersectionObserver' in window) {
+  teamSection.classList.add('team-motion-ready')
+  const teamObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return
+      entry.target.classList.add('is-visible')
+      observer.unobserve(entry.target)
+    })
+  }, { threshold: 0.2, rootMargin: '0px 0px -8% 0px' })
+
+  teamPortraits.forEach((portrait) => teamObserver.observe(portrait))
+} else {
+  teamPortraits.forEach((portrait) => portrait.classList.add('is-visible'))
+}
 
 document.querySelector<HTMLFormElement>('#waitlist-form')!.addEventListener('submit', (event) => {
   event.preventDefault()
